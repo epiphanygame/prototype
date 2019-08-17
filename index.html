@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
+
+<style>
+.textToCopy {
+opacity: 0
+}
+</style>
+
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | TheEpiphany</title>
@@ -13,6 +20,7 @@
     </script>
   </head>
   <body>
+<input type='text' class='textToCopy' id="textToCopy">
     <div class="webgl-content">
       <div id="gameContainer" style="width: 960px; height: 600px"></div>
       <div class="footer">
@@ -22,4 +30,13 @@
       </div>
     </div>
   </body>
+
+function CopyToClipboard(arg){
+var copyText = arg;
+$('.textToCopy').val(copyText);
+var textToCopy = $('.textToCopy').val();
+console.log('copyText',textToCopy);
+$('.textToCopy').select();
+document.execCommand('copy');
+}
 </html>
