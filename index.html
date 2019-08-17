@@ -18,6 +18,15 @@ opacity: 0
     <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Epiphany_2019081712.json", {onProgress: UnityProgress});
     </script>
+<script>function CopyToClipboard(arg){
+var copyText = arg;
+$('.textToCopy').val(copyText);
+var textToCopy = $('.textToCopy').val();
+console.log('copyText',textToCopy);
+$('.textToCopy').select();
+document.execCommand('copy');
+}
+</script>
   </head>
   <body>
 <input type='text' class='textToCopy' id="textToCopy">
@@ -31,12 +40,4 @@ opacity: 0
     </div>
   </body>
 
-function CopyToClipboard(arg){
-var copyText = arg;
-$('.textToCopy').val(copyText);
-var textToCopy = $('.textToCopy').val();
-console.log('copyText',textToCopy);
-$('.textToCopy').select();
-document.execCommand('copy');
-}
 </html>
