@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-
-<style>
-.textToCopy {
-opacity: 0
-}
-</style>
-
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | TheEpiphany</title>
@@ -16,20 +9,10 @@ opacity: 0
     <script src="TemplateData/UnityProgress.js"></script>  
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Epiphany_2019081712.json", {onProgress: UnityProgress});
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Epiphany_2019081901.json", {onProgress: UnityProgress});
     </script>
-<script>function CopyToClipboard(arg){
-var copyText = arg;
-$('.textToCopy').val(copyText);
-var textToCopy = $('.textToCopy').val();
-console.log('copyText',textToCopy);
-$('.textToCopy').select();
-document.execCommand('copy');
-}
-</script>
   </head>
   <body>
-<input type='text' class='textToCopy' id="textToCopy">
     <div class="webgl-content">
       <div id="gameContainer" style="width: 960px; height: 600px"></div>
       <div class="footer">
@@ -39,5 +22,4 @@ document.execCommand('copy');
       </div>
     </div>
   </body>
-
 </html>
